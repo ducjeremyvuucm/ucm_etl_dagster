@@ -11,8 +11,6 @@ def ucm_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
     yield from dbt.cli(["build"], context=context).stream()
 
 
-
-
 airbyte_instance = AirbyteResource(
     host="localhost",
     port="8000",
