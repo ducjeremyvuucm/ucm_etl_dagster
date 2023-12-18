@@ -10,6 +10,7 @@ setup(
         "dagster-dbt",
         "dbt-core>=1.4.0",
         "dbt-bigquery",
+        "pandas",
     ],
     extras_require={
         "dev": [
