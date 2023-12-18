@@ -13,6 +13,12 @@ all_assets = [
     core_assets.ucm_dbt_assets
 ]
 
+my_upstream_job = define_asset_job(
+    "airbyte_to_dbt",
+    AssetSelection.keys("ucm_dbt_assets")
+    .upstream()  # all upstream assets (in this case, just the stargazers Airbyte asset)
+    .required_multi_asset_neighbors(),  # all Airbyte assets linked to the same connection
+)
 
 defs = Definitions(
     assets=all_assets,
