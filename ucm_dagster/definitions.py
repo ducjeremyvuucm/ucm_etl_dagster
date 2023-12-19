@@ -7,26 +7,28 @@ from .assets import core_assets
 from .constants import dbt_project_dir
 from .schedules import schedules
 from .resource import airbyte_instance
+from .jobs import update_spendesk_api_key
+
 
 all_assets = [
-    #core_assets.airbyte_assets,
-    core_assets.ucm_dbt_assets,
-    core_assets.update_spendesk_api_key
-]
+    core_assets.airbyte_assets,
+    core_assets.ucm_dbt_assets
+#    airbyte_clockify
+]# + 
 
 # airbyte_dbt_job = define_asset_job(
 #     "airbyte_to_dbt",
 #     AssetSelection.keys("ucm_dbt_assets")
-#     .upstream()  # all upstream assets (in this case, just the stargazers Airbyte asset)
+#     .upstream()  # all upstream assets (in this case, just the starazers Airbyte asset)
 #     .required_multi_asset_neighbors(),  # all Airbyte assets linked to the same connection
 # )
 
 defs = Definitions(
     assets=all_assets,
     schedules=schedules,
-    # jobs=[airbyte_dbt_job],
+    jobs=[update_spendesk_api_key],
     resources={
         "dbt": DbtCliResource(project_dir=os.fspath(dbt_project_dir)),
-   #     "airbyte": airbyte_instance,
+     #   "airbyte": airbyte_instance,
     },
 )

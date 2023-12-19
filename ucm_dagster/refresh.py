@@ -13,7 +13,6 @@ def create_access_token(client_id, client_secret):
     url = 'https://public-api.spendesk.com/v0/auth/token'
     response = requests.post(url, headers=headers, json=payload)
     data = response.json()
-    print(data)
     token = data['access_token']
     return token
 
@@ -24,7 +23,6 @@ def encode_base64(string):
 def encode_client(client_id, client_secret):
     # Replace 'auth_string' with your actual authorization string.
     auth_string = str(client_id)+':'+str(client_secret)
-    print(encode_base64(auth_string))
     return encode_base64(auth_string)
 
 def patch_spendesk_api_token(token):

@@ -3,3 +3,8 @@ tmp*/
 __pycache__
 .env
 .venv
+
+.telemetry/
+.nux/
+.logs_queue
+ucm_dagster.egg-info
