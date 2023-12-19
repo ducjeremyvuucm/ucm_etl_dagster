@@ -8,3 +8,7 @@ __pycache__
 .nux/
 .logs_queue
 ucm_dagster.egg-info
+history/
+runs/
+logs/
+schedules/
