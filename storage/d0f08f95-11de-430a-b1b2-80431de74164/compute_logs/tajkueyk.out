@@ -1,0 +1,505 @@
+2023-12-19 22:00:36 [46mplatform[0m > Docker volume job log path: /tmp/workspace/220/0/logs.log
+2023-12-19 22:00:36 [46mplatform[0m > Executing worker wrapper. Airbyte version: 0.50.35
+2023-12-19 22:00:36 [46mplatform[0m > Attempt 0 to save workflow id for cancellation
+2023-12-19 22:00:36 [46mplatform[0m > start sync worker. job id: 220 attempt id: 0
+2023-12-19 22:00:36 [46mplatform[0m > 
+2023-12-19 22:00:36 [46mplatform[0m > ----- START REPLICATION -----
+2023-12-19 22:00:36 [46mplatform[0m > 
+2023-12-19 22:00:36 [46mplatform[0m > Running destination...
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SIDECAR_KUBE_CPU_LIMIT: '2.0'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SIDECAR_KUBE_CPU_LIMIT: '2.0'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SOCAT_KUBE_CPU_LIMIT: '2.0'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SOCAT_KUBE_CPU_LIMIT: '2.0'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SIDECAR_KUBE_CPU_REQUEST: '0.1'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SIDECAR_KUBE_CPU_REQUEST: '0.1'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SOCAT_KUBE_CPU_REQUEST: '0.1'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable SOCAT_KUBE_CPU_REQUEST: '0.1'
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable LAUNCHDARKLY_KEY: ''
+2023-12-19 22:00:36 [46mplatform[0m > Using default value for environment variable LAUNCHDARKLY_KEY: ''
+2023-12-19 22:00:36 [46mplatform[0m > Checking if airbyte/destination-bigquery:2.3.16 exists...
+2023-12-19 22:00:36 [46mplatform[0m > Checking if airbyte/source-declarative-manifest:0.55.2 exists...
+2023-12-19 22:00:36 [46mplatform[0m > airbyte/destination-bigquery:2.3.16 was found locally.
+2023-12-19 22:00:36 [46mplatform[0m > airbyte/source-declarative-manifest:0.55.2 was found locally.
+2023-12-19 22:00:36 [46mplatform[0m > Creating docker container = destination-bigquery-write-220-0-wazze with resources io.airbyte.config.ResourceRequirements@2db8a531[cpuRequest=,cpuLimit=,memoryRequest=,memoryLimit=,additionalProperties={}] and allowedHosts null
+2023-12-19 22:00:36 [46mplatform[0m > Preparing command: docker run --rm --init -i -w /data/220/0 --log-driver none --name destination-bigquery-write-220-0-wazze --network host -v airbyte_workspace:/data -v /tmp/airbyte_local:/local -e DEPLOYMENT_MODE=OSS -e WORKER_CONNECTOR_IMAGE=airbyte/destination-bigquery:2.3.16 -e AUTO_DETECT_SCHEMA=true -e LAUNCHDARKLY_KEY= -e SOCAT_KUBE_CPU_REQUEST=0.1 -e SOCAT_KUBE_CPU_LIMIT=2.0 -e FIELD_SELECTION_WORKSPACES= -e USE_STREAM_CAPABLE_STATE=true -e WORKER_ENVIRONMENT=DOCKER -e AIRBYTE_ROLE= -e APPLY_FIELD_SELECTION=false -e WORKER_JOB_ATTEMPT=0 -e OTEL_COLLECTOR_ENDPOINT=http://host.docker.internal:4317 -e FEATURE_FLAG_CLIENT=config -e AIRBYTE_VERSION=0.50.35 -e WORKER_JOB_ID=220 airbyte/destination-bigquery:2.3.16 write --config destination_config.json --catalog destination_catalog.json
+2023-12-19 22:00:36 [46mplatform[0m > Creating docker container = source-declarative-manifest-read-220-0-eaftj with resources io.airbyte.config.ResourceRequirements@5118973a[cpuRequest=,cpuLimit=,memoryRequest=,memoryLimit=,additionalProperties={}] and allowedHosts null
+2023-12-19 22:00:36 [46mplatform[0m > Preparing command: docker run --rm --init -i -w /data/220/0 --log-driver none --name source-declarative-manifest-read-220-0-eaftj -e CONCURRENT_SOURCE_STREAM_READ=false --network host -v airbyte_workspace:/data -v /tmp/airbyte_local:/local -e DEPLOYMENT_MODE=OSS -e WORKER_CONNECTOR_IMAGE=airbyte/source-declarative-manifest:0.55.2 -e AUTO_DETECT_SCHEMA=true -e LAUNCHDARKLY_KEY= -e SOCAT_KUBE_CPU_REQUEST=0.1 -e SOCAT_KUBE_CPU_LIMIT=2.0 -e FIELD_SELECTION_WORKSPACES= -e USE_STREAM_CAPABLE_STATE=true -e WORKER_ENVIRONMENT=DOCKER -e AIRBYTE_ROLE= -e APPLY_FIELD_SELECTION=false -e WORKER_JOB_ATTEMPT=0 -e OTEL_COLLECTOR_ENDPOINT=http://host.docker.internal:4317 -e FEATURE_FLAG_CLIENT=config -e AIRBYTE_VERSION=0.50.35 -e WORKER_JOB_ID=220 airbyte/source-declarative-manifest:0.55.2 read --config source_config.json --catalog source_catalog.json
+2023-12-19 22:00:36 [46mplatform[0m > Writing messages to protocol version 0.2.0
+2023-12-19 22:00:36 [46mplatform[0m > Reading messages from protocol version 0.2.0
+2023-12-19 22:00:36 [46mplatform[0m > Reading messages from protocol version 0.2.0
+2023-12-19 22:00:36 [46mplatform[0m > readFromSource: start
+2023-12-19 22:00:36 [46mplatform[0m > Starting source heartbeat check. Will check every 1 minutes.
+2023-12-19 22:00:36 [46mplatform[0m > processMessage: start
+2023-12-19 22:00:36 [46mplatform[0m > writeToDestination: start
+2023-12-19 22:00:36 [46mplatform[0m > readFromDestination: start
+2023-12-19 22:00:41 [44msource[0m > Starting syncing ManifestDeclarativeSource
+2023-12-19 22:00:41 [44msource[0m > Marking stream payables as STARTED
+2023-12-19 22:00:41 [44msource[0m > Syncing stream: payables 
+2023-12-19 22:00:41 [43mdestination[0m > WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+2023-12-19 22:00:41 [43mdestination[0m > WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+2023-12-19 22:00:41 [43mdestination[0m > WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+2023-12-19 22:00:41 [43mdestination[0m > WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+2023-12-19 22:00:42 [44msource[0m > Marking stream payables as RUNNING
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:42 [32mINFO[m i.a.c.i.b.IntegrationCliParser(parseOptions):126 - integration args: {catalog=destination_catalog.json, write=null, config=destination_config.json}
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [32mINFO[m i.a.c.i.b.IntegrationRunner(runInternal):132 - Running integration: io.airbyte.integrations.destination.bigquery.BigQueryDestination
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [32mINFO[m i.a.c.i.b.IntegrationRunner(runInternal):133 - Command: WRITE
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [32mINFO[m i.a.c.i.b.IntegrationRunner(runInternal):134 - Integration config: IntegrationConfig{command=WRITE, configPath='destination_config.json', catalogPath='destination_catalog.json', statePath='null'}
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [33mWARN[m c.n.s.JsonMetaSchema(newValidator):278 - Unknown keyword groups - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [33mWARN[m c.n.s.JsonMetaSchema(newValidator):278 - Unknown keyword group - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [33mWARN[m c.n.s.JsonMetaSchema(newValidator):278 - Unknown keyword order - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [33mWARN[m c.n.s.JsonMetaSchema(newValidator):278 - Unknown keyword display_type - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [33mWARN[m c.n.s.JsonMetaSchema(newValidator):278 - Unknown keyword airbyte_secret - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [33mWARN[m c.n.s.JsonMetaSchema(newValidator):278 - Unknown keyword always_show - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [32mINFO[m i.a.i.d.b.BigQueryUtils(getLoadingMethod):426 - Selected loading method is set to: GCS
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [32mINFO[m i.a.c.i.d.s.S3FormatConfigs(getS3FormatConfig):22 - S3 format config: {"format_type":"CSV","flattening":"No flattening"}
+2023-12-19 22:00:43 [43mdestination[0m > 2023-12-19 22:00:43 [32mINFO[m i.a.i.d.b.BigQueryUtils(isKeepFilesInGcs):442 - All tmp files will be removed from GCS when replication is finished
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.i.d.b.BigQueryStagingConsumerFactory(lambda$createWriteConfigs$1):114 - BigQuery write config: BigQueryWriteConfig[streamName=spendesk_payables, namespace=sources, datasetId=airbyte_internal, datasetLocation=europe-west3, tmpTableId=GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=_airbyte_tmp_vpy_spendesk_payables}}, targetTableId=GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}}, tableSchema=Schema{fields=[Field{name=_airbyte_raw_id, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_extracted_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_loaded_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_data, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}]}, syncMode=overwrite]
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.c.i.d.b.BufferManager(<init>):53 - Max 'memory' available for buffer allocation 2 GB
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.c.i.d.FlushWorkers(start):98 - Start async buffer supervisor
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.c.i.d.b.BufferManager(printQueueInfo):118 - [ASYNC QUEUE INFO] Global: max: 2.3 GB, allocated: 10 MB (10.0 MB), % used: 0.004243041413457733 | State Manager memory usage: Allocated: 10 MB, Used: 0 bytes, percentage Used 0.000000
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.c.i.d.AsyncStreamConsumer(start):137 - class io.airbyte.cdk.integrations.destination_async.AsyncStreamConsumer started.
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.i.d.b.BigQueryStagingConsumerFactory(lambda$onStartFunction$3):137 - Preparing airbyte_raw tables in destination started for 1 streams
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(prepareTables):108 - Preparing final tables
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.c.i.d.FlushWorkers(printWorkerInfo):146 - [ASYNC WORKER INFO] Pool queue size: 0, Active threads: 0
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.i.b.d.t.BaseDestinationV1V2Migrator(migrateIfNecessary):26 - Assessing whether migration is necessary for stream spendesk_payables
+2023-12-19 22:00:45 [43mdestination[0m > 2023-12-19 22:00:45 [32mINFO[m i.a.i.b.d.t.BaseDestinationV1V2Migrator(shouldMigrate):45 - Checking whether v1 raw table _airbyte_raw_spendesk_payables in dataset sources exists
+2023-12-19 22:00:47 [43mdestination[0m > 2023-12-19 22:00:47 [32mINFO[m i.a.i.b.d.t.BaseDestinationV1V2Migrator(shouldMigrate):49 - Migration Info: Required for Sync mode: false, No existing v2 raw tables: false, A v1 raw table exists: false
+2023-12-19 22:00:47 [43mdestination[0m > 2023-12-19 22:00:47 [32mINFO[m i.a.i.b.d.t.BaseDestinationV1V2Migrator(migrateIfNecessary):32 - No Migration Required for stream: spendesk_payables
+2023-12-19 22:00:47 [43mdestination[0m > 2023-12-19 22:00:47 [32mINFO[m i.a.i.d.b.t.BigQueryV2TableMigrator(migrateIfNecessary):76 - No Data column Migration Required for stream sources_raw__stream_spendesk_payables
+2023-12-19 22:00:47 [43mdestination[0m > 2023-12-19 22:00:47 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(lambda$prepareTablesFuture$1):129 - Final Table exists for stream spendesk_payables
+2023-12-19 22:00:48 [43mdestination[0m > 2023-12-19 22:00:48 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(execute):99 - Executing sql ce537fc4-8b05-4ccb-be87-45b2b5ff7df5: CREATE SCHEMA IF NOT EXISTS `reporting-340722`.`sources`
+2023-12-19 22:00:48 [43mdestination[0m > OPTIONS(location="europe-west3");
+2023-12-19 22:00:48 [43mdestination[0m > 
+2023-12-19 22:00:48 [43mdestination[0m > CREATE OR REPLACE TABLE `reporting-340722`.`sources`.`spendesk_payables_airbyte_tmp` (
+2023-12-19 22:00:48 [43mdestination[0m >   _airbyte_raw_id STRING NOT NULL,
+2023-12-19 22:00:48 [43mdestination[0m >   _airbyte_extracted_at TIMESTAMP NOT NULL,
+2023-12-19 22:00:48 [43mdestination[0m >   _airbyte_meta JSON NOT NULL,
+2023-12-19 22:00:48 [43mdestination[0m > `id` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `type` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `amount` NUMERIC,
+2023-12-19 22:00:48 [43mdestination[0m > `teamId` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `userId` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `currency` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `teamName` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `companyId` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `lineItems` JSON,
+2023-12-19 22:00:48 [43mdestination[0m > `exportedAt` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `allocations` JSON,
+2023-12-19 22:00:48 [43mdestination[0m > `description` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `payableDate` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `costCenterId` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `counterparty` JSON,
+2023-12-19 22:00:48 [43mdestination[0m > `invoiceNumber` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `costCenterName` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `invoiceDueDate` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `functionalAmount` NUMERIC,
+2023-12-19 22:00:48 [43mdestination[0m > `bookkeepingStatus` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `functionalCurrency` STRING,
+2023-12-19 22:00:48 [43mdestination[0m > `documentaryEvidence` JSON,
+2023-12-19 22:00:48 [43mdestination[0m > `analyticalProperties` JSON,
+2023-12-19 22:00:48 [43mdestination[0m > `functionalExchangeRate` NUMERIC
+2023-12-19 22:00:48 [43mdestination[0m > )
+2023-12-19 22:00:48 [43mdestination[0m > PARTITION BY (DATE_TRUNC(_airbyte_extracted_at, DAY))
+2023-12-19 22:00:48 [43mdestination[0m > CLUSTER BY `_airbyte_extracted_at`;
+2023-12-19 22:00:48 [43mdestination[0m > 
+2023-12-19 22:00:49 [43mdestination[0m > 2023-12-19 22:00:49 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(execute):119 - Root-level job ce537fc4-8b05-4ccb-be87-45b2b5ff7df5 completed in 970 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:00:49 [43mdestination[0m > 2023-12-19 22:00:49 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql CREATE SCHEMA IF NOT EXISTS `reporting-340722`.`sources` OPTIONS(location="europe-west3")... completed in 84 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:00:49 [43mdestination[0m > 2023-12-19 22:00:49 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql CREATE OR REPLACE TABLE `reporting-340722`.`sources`.`spendesk_payables_airbyte_tmp` ( _airbyte_raw_... completed in 113 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:00:49 [43mdestination[0m > 2023-12-19 22:00:49 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(lambda$prepareTablesFuture$1):138 - Using temp final table for stream spendesk_payables, will overwrite existing table at end of sync
+2023-12-19 22:00:50 [43mdestination[0m > 2023-12-19 22:00:50 [32mINFO[m i.a.i.d.b.BigQueryStagingConsumerFactory(lambda$onStartFunction$3):140 - Preparing staging are in destination for schema: Schema{fields=[Field{name=_airbyte_raw_id, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_extracted_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_loaded_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_data, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}]}, stream: spendesk_payables, target table: GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}}, stage: spendesk_payables
+2023-12-19 22:00:50 [43mdestination[0m > 2023-12-19 22:00:50 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(createSchemaIfNotExists):86 - Creating dataset airbyte_internal
+2023-12-19 22:00:50 [43mdestination[0m > 2023-12-19 22:00:50 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(createTableIfNotExists):102 - Creating target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}}
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryUtils(createPartitionedTableIfNotExists):228 - Partitioned table ALREADY EXISTS: GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}}
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(createStageIfNotExists):109 - Creating staging path for stream spendesk_payables (dataset airbyte_internal): ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(truncateTableIfExists):207 - Truncating target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}} (dataset airbyte_internal)
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(dropTableIfExists):175 - Deleting target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}} (dataset airbyte_internal)
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(createTableIfNotExists):102 - Creating target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}}
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryUtils(createPartitionedTableIfNotExists):231 - Partitioned table created successfully: GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}}
+2023-12-19 22:00:51 [43mdestination[0m > 2023-12-19 22:00:51 [32mINFO[m i.a.i.d.b.BigQueryStagingConsumerFactory(lambda$onStartFunction$3):159 - Preparing tables in destination completed.
+2023-12-19 22:01:45 [43mdestination[0m > 2023-12-19 22:01:45 [32mINFO[m i.a.c.i.d.b.BufferManager(printQueueInfo):118 - [ASYNC QUEUE INFO] Global: max: 2.3 GB, allocated: 20 MB (20.0 MB), % used: 0.008486082826915466 | Queue `spendesk_payables`, num records: 2900, num bytes: 4.25 MB, allocated bytes: 10 MB | State Manager memory usage: Allocated: 10 MB, Used: 0 bytes, percentage Used 0.000000
+2023-12-19 22:01:45 [43mdestination[0m > 2023-12-19 22:01:45 [32mINFO[m i.a.c.i.d.FlushWorkers(printWorkerInfo):146 - [ASYNC WORKER INFO] Pool queue size: 0, Active threads: 0
+2023-12-19 22:02:20 [46mplatform[0m > Records read: 5000 (6 MB)
+2023-12-19 22:02:25 [44msource[0m > Read 5279 records from payables stream
+2023-12-19 22:02:25 [44msource[0m > Marking stream payables as STOPPED
+2023-12-19 22:02:25 [44msource[0m > Finished syncing payables
+2023-12-19 22:02:25 [44msource[0m > ManifestDeclarativeSource runtimes:
+Syncing stream payables 0:01:43.986942
+2023-12-19 22:02:25 [44msource[0m > Finished syncing ManifestDeclarativeSource
+2023-12-19 22:02:25 [46mplatform[0m > Total records read: 5282 (6 MB)
+2023-12-19 22:02:25 [46mplatform[0m > Schema validation was performed to a max of 10 records with errors per stream.
+2023-12-19 22:02:25 [46mplatform[0m > Schema validation errors found for stream _payables. Error messages: [$.analyticalProperties[0].valueName: null found, string expected]
+2023-12-19 22:02:25 [46mplatform[0m > readFromSource: done. (source.isFinished:true, fromSource.isClosed:false)
+2023-12-19 22:02:25 [46mplatform[0m > processMessage: done. (fromSource.isDone:true, forDest.isClosed:false)
+2023-12-19 22:02:25 [46mplatform[0m > thread status... heartbeat thread: false , replication thread: true
+2023-12-19 22:02:25 [46mplatform[0m > writeToDestination: done. (forDest.isDone:true, isDestRunning:true)
+2023-12-19 22:02:25 [46mplatform[0m > thread status... timeout thread: false , replication thread: true
+2023-12-19 22:02:25 [43mdestination[0m > 2023-12-19 22:02:25 [32mINFO[m i.a.c.i.d.FlushWorkers(close):191 - Closing flush workers -- waiting for all buffers to flush
+2023-12-19 22:02:25 [43mdestination[0m > 2023-12-19 22:02:25 [32mINFO[m i.a.c.i.d.FlushWorkers(close):216 - REMAINING_BUFFERS_INFO
+2023-12-19 22:02:25 [43mdestination[0m >   Namespace: sources Stream: spendesk_payables -- remaining records: 5279
+2023-12-19 22:02:25 [43mdestination[0m > 2023-12-19 22:02:25 [32mINFO[m i.a.c.i.d.FlushWorkers(close):217 - Waiting for all streams to flush.
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.DetectStreamToFlush(getNextStreamToFlush):122 - flushing: trigger info: sources - spendesk_payables, time trigger: false , size trigger: true current threshold b: 0 bytes, queue size b: 7.81 MB, penalty b: 0 bytes, after penalty b: 7.81 MB
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.FlushWorkers(lambda$flush$1):152 - Flush Worker (14e79) -- Worker picked up work.
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.FlushWorkers(lambda$flush$1):154 - Flush Worker (14e79) -- Attempting to read from queue namespace: sources, stream: spendesk_payables.
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.GlobalMemoryManager(free):88 - Freeing 2291473 bytes..
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.FlushWorkers(lambda$flush$1):167 - Flush Worker (14e79) -- Batch contains: 5279 records, 7.81 MB bytes.
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.FlushWorkers(close):220 - Closing flush workers -- all buffers flushed
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.GlobalMemoryManager(free):88 - Freeing 0 bytes..
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.FlushWorkers(close):226 - Closing flush workers -- Supervisor shutdown status: true
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.FlushWorkers(close):228 - Closing flush workers -- Starting worker pool shutdown..
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.c.i.d.r.BaseSerializedBuffer(flush):172 - Finished writing data to c0fc4edb-0dff-45b6-b2c1-10dd9249911d3365339203678671346.csv.gz (1 MB)
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.i.d.b.BigQueryAsyncFlush(flush):61 - Flushing CSV buffer for stream spendesk_payables (1 MB) to staging
+2023-12-19 22:02:26 [43mdestination[0m > 2023-12-19 22:02:26 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(uploadRecordsToStage):116 - Uploading records to staging for stream spendesk_payables (dataset airbyte_internal): ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m a.m.s.StreamTransferManager(getMultiPartOutputStreams):329 - Initiated multipart upload to ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz with full ID ABPnzm7WZktQF3Mcrh1CyUv8IuyocBeiZcwVmYR9PytSxOR0FrvRGVxUdQ71aI6dZ_vlJOCD
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m a.m.s.MultiPartOutputStream(close):158 - Called close() on [MultipartOutputStream for parts 1 - 10000]
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m a.m.s.StreamTransferManager(complete):367 - [Manager uploading to ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz with id ABPnzm7WZ...dZ_vlJOCD]: Uploading leftover stream [Part number 1 containing 1.01 MB]
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m a.m.s.StreamTransferManager(uploadStreamPart):558 - [Manager uploading to ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz with id ABPnzm7WZ...dZ_vlJOCD]: Finished uploading [Part number 1 containing 1.01 MB]
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m a.m.s.StreamTransferManager(complete):395 - [Manager uploading to ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz with id ABPnzm7WZ...dZ_vlJOCD]: Completed
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m i.a.c.i.d.s.S3StorageOperations(loadDataIntoBucket):214 - Uploaded buffer file to storage: c0fc4edb-0dff-45b6-b2c1-10dd9249911d3365339203678671346.csv.gz -> ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz (filename: cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz)
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m i.a.c.i.d.s.S3StorageOperations(uploadRecordsToBucket):131 - Successfully loaded records to stage ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/ with 0 re-attempt(s)
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(copyIntoTableFromStage):134 - Uploading records from staging files to target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}} (dataset airbyte_internal): cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(copyIntoTableFromStage):138 - Uploading staged file: gs://ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(copyIntoTableFromStage):147 - [JobId{project=reporting-340722, job=7429ea83-a983-408a-8ad2-9da90e1e435f, location=europe-west3}] Created a new job to upload record(s) to target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}} (dataset airbyte_internal): Job{job=JobId{project=reporting-340722, job=7429ea83-a983-408a-8ad2-9da90e1e435f, location=europe-west3}, status=JobStatus{state=RUNNING, error=null, executionErrors=null}, statistics=LoadStatistics{creationTime=1703023347817, endTime=null, startTime=1703023347913, numChildJobs=null, parentJobId=null, scriptStatistics=null, reservationUsage=null, transactionInfo=null, sessionInfo=null, inputBytes=null, inputFiles=null, outputBytes=null, outputRows=null, badRecords=null}, userEmail=analytics@reporting-340722.iam.gserviceaccount.com, etag=2cdx5n9mLy0NGRmSKUNjQg==, generatedId=reporting-340722:europe-west3.7429ea83-a983-408a-8ad2-9da90e1e435f, selfLink=https://www.googleapis.com/bigquery/v2/projects/reporting-340722/jobs/7429ea83-a983-408a-8ad2-9da90e1e435f?location=europe-west3, configuration=LoadJobConfiguration{type=LOAD, destinationTable=GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, projectId=reporting-340722, tableId=sources_raw__stream_spendesk_payables}}, decimalTargetTypes=null, destinationEncryptionConfiguration=null, createDisposition=null, writeDisposition=WRITE_APPEND, formatOptions=CsvOptions{type=CSV, allowJaggedRows=null, allowQuotedNewLines=null, encoding=null, fieldDelimiter=null, quote=null, skipLeadingRows=null, preserveAsciiControlCharacters=null}, nullMarker=null, maxBadRecords=null, schema=Schema{fields=[Field{name=_airbyte_raw_id, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_extracted_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_loaded_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_data, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}]}, ignoreUnknownValue=null, sourceUris=[gs://ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz], schemaUpdateOptions=null, autodetect=null, timePartitioning=null, clustering=null, useAvroLogicalTypes=null, labels=null, jobTimeoutMs=300000, rangePartitioning=null, hivePartitioningOptions=null, referenceFileSchemaUri=null, connectionProperties=null, createSession=null}}
+2023-12-19 22:02:27 [43mdestination[0m > 2023-12-19 22:02:27 [32mINFO[m i.a.i.d.b.BigQueryUtils(waitForJobFinish):451 - Waiting for job finish Job{job=JobId{project=reporting-340722, job=7429ea83-a983-408a-8ad2-9da90e1e435f, location=europe-west3}, status=JobStatus{state=RUNNING, error=null, executionErrors=null}, statistics=LoadStatistics{creationTime=1703023347817, endTime=null, startTime=1703023347913, numChildJobs=null, parentJobId=null, scriptStatistics=null, reservationUsage=null, transactionInfo=null, sessionInfo=null, inputBytes=null, inputFiles=null, outputBytes=null, outputRows=null, badRecords=null}, userEmail=analytics@reporting-340722.iam.gserviceaccount.com, etag=2cdx5n9mLy0NGRmSKUNjQg==, generatedId=reporting-340722:europe-west3.7429ea83-a983-408a-8ad2-9da90e1e435f, selfLink=https://www.googleapis.com/bigquery/v2/projects/reporting-340722/jobs/7429ea83-a983-408a-8ad2-9da90e1e435f?location=europe-west3, configuration=LoadJobConfiguration{type=LOAD, destinationTable=GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, projectId=reporting-340722, tableId=sources_raw__stream_spendesk_payables}}, decimalTargetTypes=null, destinationEncryptionConfiguration=null, createDisposition=null, writeDisposition=WRITE_APPEND, formatOptions=CsvOptions{type=CSV, allowJaggedRows=null, allowQuotedNewLines=null, encoding=null, fieldDelimiter=null, quote=null, skipLeadingRows=null, preserveAsciiControlCharacters=null}, nullMarker=null, maxBadRecords=null, schema=Schema{fields=[Field{name=_airbyte_raw_id, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_extracted_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_loaded_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_data, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}]}, ignoreUnknownValue=null, sourceUris=[gs://ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz], schemaUpdateOptions=null, autodetect=null, timePartitioning=null, clustering=null, useAvroLogicalTypes=null, labels=null, jobTimeoutMs=300000, rangePartitioning=null, hivePartitioningOptions=null, referenceFileSchemaUri=null, connectionProperties=null, createSession=null}}. Status: JobStatus{state=RUNNING, error=null, executionErrors=null}
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.i.d.b.BigQueryUtils(waitForJobFinish):453 - Job finish Job{job=JobId{project=reporting-340722, job=7429ea83-a983-408a-8ad2-9da90e1e435f, location=europe-west3}, status=JobStatus{state=RUNNING, error=null, executionErrors=null}, statistics=LoadStatistics{creationTime=1703023347817, endTime=null, startTime=1703023347913, numChildJobs=null, parentJobId=null, scriptStatistics=null, reservationUsage=null, transactionInfo=null, sessionInfo=null, inputBytes=null, inputFiles=null, outputBytes=null, outputRows=null, badRecords=null}, userEmail=analytics@reporting-340722.iam.gserviceaccount.com, etag=2cdx5n9mLy0NGRmSKUNjQg==, generatedId=reporting-340722:europe-west3.7429ea83-a983-408a-8ad2-9da90e1e435f, selfLink=https://www.googleapis.com/bigquery/v2/projects/reporting-340722/jobs/7429ea83-a983-408a-8ad2-9da90e1e435f?location=europe-west3, configuration=LoadJobConfiguration{type=LOAD, destinationTable=GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, projectId=reporting-340722, tableId=sources_raw__stream_spendesk_payables}}, decimalTargetTypes=null, destinationEncryptionConfiguration=null, createDisposition=null, writeDisposition=WRITE_APPEND, formatOptions=CsvOptions{type=CSV, allowJaggedRows=null, allowQuotedNewLines=null, encoding=null, fieldDelimiter=null, quote=null, skipLeadingRows=null, preserveAsciiControlCharacters=null}, nullMarker=null, maxBadRecords=null, schema=Schema{fields=[Field{name=_airbyte_raw_id, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_extracted_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_loaded_at, type=TIMESTAMP, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}, Field{name=_airbyte_data, type=STRING, mode=null, description=null, policyTags=null, maxLength=null, scale=null, precision=null, defaultValueExpression=null, collation=null}]}, ignoreUnknownValue=null, sourceUris=[gs://ucm-analytics-bucket/ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz], schemaUpdateOptions=null, autodetect=null, timePartitioning=null, clustering=null, useAvroLogicalTypes=null, labels=null, jobTimeoutMs=300000, rangePartitioning=null, hivePartitioningOptions=null, referenceFileSchemaUri=null, connectionProperties=null, createSession=null}} with status JobStatus{state=RUNNING, error=null, executionErrors=null}
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(copyIntoTableFromStage):152 - [JobId{project=reporting-340722, job=7429ea83-a983-408a-8ad2-9da90e1e435f, location=europe-west3}] Target table GenericData{classInfo=[datasetId, projectId, tableId], {datasetId=airbyte_internal, tableId=sources_raw__stream_spendesk_payables}} (dataset airbyte_internal) is successfully appended with staging files
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.c.i.d.r.FileBuffer(deleteFile):109 - Deleting tempFile data c0fc4edb-0dff-45b6-b2c1-10dd9249911d3365339203678671346.csv.gz
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.c.i.d.GlobalMemoryManager(free):88 - Freeing 0 bytes..
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.c.i.d.GlobalMemoryManager(free):88 - Freeing 8194287 bytes..
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.c.i.d.FlushWorkers(lambda$flush$1):176 - Flush Worker (14e79) -- Worker finished flushing. Current queue size: 0
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.c.i.d.FlushWorkers(close):231 - Closing flush workers -- Workers shutdown status: true
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.c.i.d.b.BufferManager(close):92 - Buffers cleared..
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(typeAndDedupe):242 - Typing and deduping all tables
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(lambda$typeAndDedupeTask$2):216 - Waiting for raw table writes to pause for sources.spendesk_payables
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.i.b.d.t.TypeAndDedupeTransaction(executeTypeAndDedupe):36 - Attempting typing and deduping for sources.spendesk_payables with suffix
+2023-12-19 22:02:29 [43mdestination[0m > 2023-12-19 22:02:29 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(execute):99 - Executing sql c0e6479f-dd37-4c61-8230-ae72d4a942cc: BEGIN TRANSACTION;
+2023-12-19 22:02:29 [43mdestination[0m > INSERT INTO `reporting-340722`.`sources`.`spendesk_payables_airbyte_tmp`
+2023-12-19 22:02:29 [43mdestination[0m > (
+2023-12-19 22:02:29 [43mdestination[0m > `id`,
+2023-12-19 22:02:29 [43mdestination[0m > `type`,
+2023-12-19 22:02:29 [43mdestination[0m > `amount`,
+2023-12-19 22:02:29 [43mdestination[0m > `teamId`,
+2023-12-19 22:02:29 [43mdestination[0m > `userId`,
+2023-12-19 22:02:29 [43mdestination[0m > `currency`,
+2023-12-19 22:02:29 [43mdestination[0m > `teamName`,
+2023-12-19 22:02:29 [43mdestination[0m > `companyId`,
+2023-12-19 22:02:29 [43mdestination[0m > `lineItems`,
+2023-12-19 22:02:29 [43mdestination[0m > `exportedAt`,
+2023-12-19 22:02:29 [43mdestination[0m > `allocations`,
+2023-12-19 22:02:29 [43mdestination[0m > `description`,
+2023-12-19 22:02:29 [43mdestination[0m > `payableDate`,
+2023-12-19 22:02:29 [43mdestination[0m > `costCenterId`,
+2023-12-19 22:02:29 [43mdestination[0m > `counterparty`,
+2023-12-19 22:02:29 [43mdestination[0m > `invoiceNumber`,
+2023-12-19 22:02:29 [43mdestination[0m > `costCenterName`,
+2023-12-19 22:02:29 [43mdestination[0m > `invoiceDueDate`,
+2023-12-19 22:02:29 [43mdestination[0m > `functionalAmount`,
+2023-12-19 22:02:29 [43mdestination[0m > `bookkeepingStatus`,
+2023-12-19 22:02:29 [43mdestination[0m > `functionalCurrency`,
+2023-12-19 22:02:29 [43mdestination[0m > `documentaryEvidence`,
+2023-12-19 22:02:29 [43mdestination[0m > `analyticalProperties`,
+2023-12-19 22:02:29 [43mdestination[0m > `functionalExchangeRate`,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_meta,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_raw_id,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_extracted_at
+2023-12-19 22:02:29 [43mdestination[0m > )
+2023-12-19 22:02:29 [43mdestination[0m > WITH intermediate_data AS (
+2023-12-19 22:02:29 [43mdestination[0m >   SELECT
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."id"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."id"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."id"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."id"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `id`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."type"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."type"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."type"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."type"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `type`,
+2023-12-19 22:02:29 [43mdestination[0m > CAST(JSON_VALUE(`_airbyte_data`, '$."amount"') as NUMERIC) as `amount`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."teamId"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."teamId"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."teamId"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."teamId"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `teamId`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."userId"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."userId"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."userId"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."userId"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `userId`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."currency"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."currency"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."currency"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."currency"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `currency`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."teamName"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."teamName"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."teamName"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."teamName"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `teamName`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."companyId"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."companyId"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."companyId"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."companyId"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `companyId`,
+2023-12-19 22:02:29 [43mdestination[0m > PARSE_JSON(CASE
+2023-12-19 22:02:29 [43mdestination[0m >   WHEN JSON_QUERY(`_airbyte_data`, '$."lineItems"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >     OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."lineItems"'), wide_number_mode=>'round')) != 'array'
+2023-12-19 22:02:29 [43mdestination[0m >     THEN NULL
+2023-12-19 22:02:29 [43mdestination[0m >   ELSE JSON_QUERY(`_airbyte_data`, '$."lineItems"')
+2023-12-19 22:02:29 [43mdestination[0m > END, wide_number_mode=>'round')
+2023-12-19 22:02:29 [43mdestination[0m >  as `lineItems`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."exportedAt"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."exportedAt"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."exportedAt"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."exportedAt"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `exportedAt`,
+2023-12-19 22:02:29 [43mdestination[0m > PARSE_JSON(CASE
+2023-12-19 22:02:29 [43mdestination[0m >   WHEN JSON_QUERY(`_airbyte_data`, '$."allocations"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >     OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."allocations"'), wide_number_mode=>'round')) != 'array'
+2023-12-19 22:02:29 [43mdestination[0m >     THEN NULL
+2023-12-19 22:02:29 [43mdestination[0m >   ELSE JSON_QUERY(`_airbyte_data`, '$."allocations"')
+2023-12-19 22:02:29 [43mdestination[0m > END, wide_number_mode=>'round')
+2023-12-19 22:02:29 [43mdestination[0m >  as `allocations`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."description"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."description"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."description"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."description"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `description`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."payableDate"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."payableDate"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."payableDate"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."payableDate"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `payableDate`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."costCenterId"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."costCenterId"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."costCenterId"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."costCenterId"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `costCenterId`,
+2023-12-19 22:02:29 [43mdestination[0m > PARSE_JSON(CASE
+2023-12-19 22:02:29 [43mdestination[0m >   WHEN JSON_QUERY(`_airbyte_data`, '$."counterparty"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >     OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."counterparty"'), wide_number_mode=>'round')) != 'object'
+2023-12-19 22:02:29 [43mdestination[0m >     THEN NULL
+2023-12-19 22:02:29 [43mdestination[0m >   ELSE JSON_QUERY(`_airbyte_data`, '$."counterparty"')
+2023-12-19 22:02:29 [43mdestination[0m > END, wide_number_mode=>'round')
+2023-12-19 22:02:29 [43mdestination[0m >  as `counterparty`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."invoiceNumber"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."invoiceNumber"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."invoiceNumber"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."invoiceNumber"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `invoiceNumber`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."costCenterName"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."costCenterName"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."costCenterName"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."costCenterName"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `costCenterName`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."invoiceDueDate"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."invoiceDueDate"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."invoiceDueDate"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."invoiceDueDate"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `invoiceDueDate`,
+2023-12-19 22:02:29 [43mdestination[0m > CAST(JSON_VALUE(`_airbyte_data`, '$."functionalAmount"') as NUMERIC) as `functionalAmount`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."bookkeepingStatus"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."bookkeepingStatus"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."bookkeepingStatus"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."bookkeepingStatus"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `bookkeepingStatus`,
+2023-12-19 22:02:29 [43mdestination[0m > (CASE
+2023-12-19 22:02:29 [43mdestination[0m >       WHEN JSON_QUERY(`_airbyte_data`, '$."functionalCurrency"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >         OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."functionalCurrency"'), wide_number_mode=>'round')) != 'string'
+2023-12-19 22:02:29 [43mdestination[0m >         THEN JSON_QUERY(`_airbyte_data`, '$."functionalCurrency"')
+2023-12-19 22:02:29 [43mdestination[0m >     ELSE
+2023-12-19 22:02:29 [43mdestination[0m >     JSON_VALUE(`_airbyte_data`, '$."functionalCurrency"')
+2023-12-19 22:02:29 [43mdestination[0m >   END)
+2023-12-19 22:02:29 [43mdestination[0m >  as `functionalCurrency`,
+2023-12-19 22:02:29 [43mdestination[0m > PARSE_JSON(CASE
+2023-12-19 22:02:29 [43mdestination[0m >   WHEN JSON_QUERY(`_airbyte_data`, '$."documentaryEvidence"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >     OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."documentaryEvidence"'), wide_number_mode=>'round')) != 'object'
+2023-12-19 22:02:29 [43mdestination[0m >     THEN NULL
+2023-12-19 22:02:29 [43mdestination[0m >   ELSE JSON_QUERY(`_airbyte_data`, '$."documentaryEvidence"')
+2023-12-19 22:02:29 [43mdestination[0m > END, wide_number_mode=>'round')
+2023-12-19 22:02:29 [43mdestination[0m >  as `documentaryEvidence`,
+2023-12-19 22:02:29 [43mdestination[0m > PARSE_JSON(CASE
+2023-12-19 22:02:29 [43mdestination[0m >   WHEN JSON_QUERY(`_airbyte_data`, '$."analyticalProperties"') IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >     OR JSON_TYPE(PARSE_JSON(JSON_QUERY(`_airbyte_data`, '$."analyticalProperties"'), wide_number_mode=>'round')) != 'array'
+2023-12-19 22:02:29 [43mdestination[0m >     THEN NULL
+2023-12-19 22:02:29 [43mdestination[0m >   ELSE JSON_QUERY(`_airbyte_data`, '$."analyticalProperties"')
+2023-12-19 22:02:29 [43mdestination[0m > END, wide_number_mode=>'round')
+2023-12-19 22:02:29 [43mdestination[0m >  as `analyticalProperties`,
+2023-12-19 22:02:29 [43mdestination[0m > CAST(JSON_VALUE(`_airbyte_data`, '$."functionalExchangeRate"') as NUMERIC) as `functionalExchangeRate`,
+2023-12-19 22:02:29 [43mdestination[0m >   [] AS column_errors,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_raw_id,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_extracted_at
+2023-12-19 22:02:29 [43mdestination[0m >   FROM `reporting-340722`.`airbyte_internal`.`sources_raw__stream_spendesk_payables`
+2023-12-19 22:02:29 [43mdestination[0m >   WHERE
+2023-12-19 22:02:29 [43mdestination[0m >     _airbyte_loaded_at IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >      AND _airbyte_extracted_at > '2023-12-19T17:53:28.258Z'
+2023-12-19 22:02:29 [43mdestination[0m > )
+2023-12-19 22:02:29 [43mdestination[0m > SELECT
+2023-12-19 22:02:29 [43mdestination[0m > `id`,
+2023-12-19 22:02:29 [43mdestination[0m > `type`,
+2023-12-19 22:02:29 [43mdestination[0m > `amount`,
+2023-12-19 22:02:29 [43mdestination[0m > `teamId`,
+2023-12-19 22:02:29 [43mdestination[0m > `userId`,
+2023-12-19 22:02:29 [43mdestination[0m > `currency`,
+2023-12-19 22:02:29 [43mdestination[0m > `teamName`,
+2023-12-19 22:02:29 [43mdestination[0m > `companyId`,
+2023-12-19 22:02:29 [43mdestination[0m > `lineItems`,
+2023-12-19 22:02:29 [43mdestination[0m > `exportedAt`,
+2023-12-19 22:02:29 [43mdestination[0m > `allocations`,
+2023-12-19 22:02:29 [43mdestination[0m > `description`,
+2023-12-19 22:02:29 [43mdestination[0m > `payableDate`,
+2023-12-19 22:02:29 [43mdestination[0m > `costCenterId`,
+2023-12-19 22:02:29 [43mdestination[0m > `counterparty`,
+2023-12-19 22:02:29 [43mdestination[0m > `invoiceNumber`,
+2023-12-19 22:02:29 [43mdestination[0m > `costCenterName`,
+2023-12-19 22:02:29 [43mdestination[0m > `invoiceDueDate`,
+2023-12-19 22:02:29 [43mdestination[0m > `functionalAmount`,
+2023-12-19 22:02:29 [43mdestination[0m > `bookkeepingStatus`,
+2023-12-19 22:02:29 [43mdestination[0m > `functionalCurrency`,
+2023-12-19 22:02:29 [43mdestination[0m > `documentaryEvidence`,
+2023-12-19 22:02:29 [43mdestination[0m > `analyticalProperties`,
+2023-12-19 22:02:29 [43mdestination[0m > `functionalExchangeRate`,
+2023-12-19 22:02:29 [43mdestination[0m >   to_json(struct(COALESCE((SELECT ARRAY_AGG(unnested_column_errors IGNORE NULLS) FROM UNNEST(column_errors) unnested_column_errors), []) AS errors)) AS _airbyte_meta,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_raw_id,
+2023-12-19 22:02:29 [43mdestination[0m >   _airbyte_extracted_at
+2023-12-19 22:02:29 [43mdestination[0m > FROM intermediate_data;
+2023-12-19 22:02:29 [43mdestination[0m > UPDATE `reporting-340722`.`airbyte_internal`.`sources_raw__stream_spendesk_payables`
+2023-12-19 22:02:29 [43mdestination[0m > SET `_airbyte_loaded_at` = CURRENT_TIMESTAMP()
+2023-12-19 22:02:29 [43mdestination[0m > WHERE `_airbyte_loaded_at` IS NULL
+2023-12-19 22:02:29 [43mdestination[0m >    AND _airbyte_extracted_at > '2023-12-19T17:53:28.258Z'
+2023-12-19 22:02:29 [43mdestination[0m > ;
+2023-12-19 22:02:29 [43mdestination[0m > COMMIT TRANSACTION;
+2023-12-19 22:02:29 [43mdestination[0m > 
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(execute):119 - Root-level job c0e6479f-dd37-4c61-8230-ae72d4a942cc completed in 6937 ms; processed 15079382 bytes; billed for 31457280 bytes
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql BEGIN TRANSACTION completed in 49 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql INSERT INTO `reporting-340722`.`sources`.`spendesk_payables_airbyte_tmp` ( `id`, `type`, `amount`, `... completed in 2912 ms; processed 7539691 bytes; billed for 20971520 bytes
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql UPDATE `reporting-340722`.`airbyte_internal`.`sources_raw__stream_spendesk_payables` SET `_airbyte_l... completed in 2378 ms; processed 7539691 bytes; billed for 10485760 bytes
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql COMMIT TRANSACTION completed in 131 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(lambda$typeAndDedupeTask$2):224 - Allowing other threads to proceed for sources.spendesk_payables
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.BigQueryStagingConsumerFactory(lambda$onCloseFunction$4):179 - Cleaning up destination started for 1 streams
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.b.BigQueryGcsOperations(dropStageIfExists):186 - Cleaning up staging path for stream spendesk_payables (dataset airbyte_internal): ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables
+2023-12-19 22:02:37 [43mdestination[0m > 2023-12-19 22:02:37 [32mINFO[m i.a.i.d.g.GcsStorageOperations(cleanUpObjects):43 - Deleting object ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables/2023/12/19/22/fa668167-47da-4ef5-ba21-f5dc80cb56b1/cc6d5cbf-ea4d-432a-bb39-b84dcca0f5ce.csv.gz
+2023-12-19 22:02:38 [43mdestination[0m > 2023-12-19 22:02:38 [32mINFO[m i.a.c.i.d.s.S3StorageOperations(cleanUpBucketObject):295 - Storage bucket ucm-analytics-bucket/sources/airbyte_internal_spendesk_payables has been cleaned-up (1 objects were deleted)...
+2023-12-19 22:02:38 [43mdestination[0m > 2023-12-19 22:02:38 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(commitFinalTables):258 - Committing final tables
+2023-12-19 22:02:38 [43mdestination[0m > 2023-12-19 22:02:38 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(lambda$commitFinalTableTask$6):281 - Overwriting final table with tmp table for stream sources.spendesk_payables
+2023-12-19 22:02:38 [43mdestination[0m > 2023-12-19 22:02:38 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(execute):99 - Executing sql df518d65-2c3e-4345-9157-ce2e1c439774: DROP TABLE IF EXISTS `reporting-340722`.`sources`.`spendesk_payables`;
+2023-12-19 22:02:38 [43mdestination[0m > ALTER TABLE `reporting-340722`.`sources`.`spendesk_payables_airbyte_tmp` RENAME TO `spendesk_payables`;
+2023-12-19 22:02:38 [43mdestination[0m > 
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(execute):119 - Root-level job df518d65-2c3e-4345-9157-ce2e1c439774 completed in 1395 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql DROP TABLE IF EXISTS `reporting-340722`.`sources`.`spendesk_payables` completed in 101 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.i.d.b.t.BigQueryDestinationHandler(lambda$execute$1):141 - Child sql ALTER TABLE `reporting-340722`.`sources`.`spendesk_payables_airbyte_tmp` RENAME TO `spendesk_payable... completed in 757 ms; processed 0 bytes; billed for 0 bytes
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.i.b.d.t.DefaultTyperDeduper(cleanup):299 - Cleaning Up type-and-dedupe thread pool
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.i.d.b.BigQueryStagingConsumerFactory(lambda$onCloseFunction$4):185 - Cleaning up destination completed.
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.c.i.d.AsyncStreamConsumer(close):211 - class io.airbyte.cdk.integrations.destination_async.AsyncStreamConsumer closed
+2023-12-19 22:02:40 [43mdestination[0m > 2023-12-19 22:02:40 [32mINFO[m i.a.c.i.b.IntegrationRunner(runInternal):228 - Completed integration: io.airbyte.integrations.destination.bigquery.BigQueryDestination
+2023-12-19 22:02:41 [46mplatform[0m > readFromDestination: done. (writeToDestFailed:false, dest.isFinished:true)
+2023-12-19 22:02:41 [46mplatform[0m > thread status... timeout thread: false , replication thread: true
+2023-12-19 22:02:41 [46mplatform[0m > sync summary: {
+  "status" : "completed",
+  "recordsSynced" : 0,
+  "bytesSynced" : 0,
+  "startTime" : 1703023236288,
+  "endTime" : 1703023361087,
+  "totalStats" : {
+    "bytesCommitted" : 7284039,
+    "bytesEmitted" : 7284039,
+    "destinationStateMessagesEmitted" : 0,
+    "destinationWriteEndTime" : 1703023361079,
+    "destinationWriteStartTime" : 1703023236288,
+    "meanSecondsBeforeSourceStateMessageEmitted" : 0,
+    "maxSecondsBeforeSourceStateMessageEmitted" : 0,
+    "maxSecondsBetweenStateMessageEmittedandCommitted" : 0,
+    "meanSecondsBetweenStateMessageEmittedandCommitted" : 0,
+    "recordsEmitted" : 5279,
+    "recordsCommitted" : 5279,
+    "replicationEndTime" : 1703023361087,
+    "replicationStartTime" : 1703023236288,
+    "sourceReadEndTime" : 1703023345673,
+    "sourceReadStartTime" : 1703023236288,
+    "sourceStateMessagesEmitted" : 0
+  },
+  "streamStats" : [ {
+    "streamName" : "payables",
+    "stats" : {
+      "bytesCommitted" : 7284039,
+      "bytesEmitted" : 7284039,
+      "recordsEmitted" : 5279,
+      "recordsCommitted" : 5279
+    }
+  } ],
+  "performanceMetrics" : {
+    "processFromSource" : {
+      "elapsedTimeInNanos" : 225450384,
+      "executionCount" : 5282,
+      "avgExecTimeInNanos" : 42682.768648239304
+    },
+    "readFromSource" : {
+      "elapsedTimeInNanos" : 109322895676,
+      "executionCount" : 5289,
+      "avgExecTimeInNanos" : 2.0669861160143696E7
+    },
+    "processFromDest" : {
+      "elapsedTimeInNanos" : 0,
+      "executionCount" : 0,
+      "avgExecTimeInNanos" : "NaN"
+    },
+    "writeToDest" : {
+      "elapsedTimeInNanos" : 281394919,
+      "executionCount" : 5279,
+      "avgExecTimeInNanos" : 53304.58780071983
+    },
+    "readFromDest" : {
+      "elapsedTimeInNanos" : 124734646621,
+      "executionCount" : 15,
+      "avgExecTimeInNanos" : 8.315643108066667E9
+    }
+  }
+}
+2023-12-19 22:02:41 [46mplatform[0m > failures: [ ]
+2023-12-19 22:02:41 [46mplatform[0m > 
+2023-12-19 22:02:41 [46mplatform[0m > ----- END REPLICATION -----
+2023-12-19 22:02:41 [46mplatform[0m > 

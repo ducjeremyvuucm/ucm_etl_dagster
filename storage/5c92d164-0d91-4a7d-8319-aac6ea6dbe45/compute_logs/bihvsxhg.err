@@ -1,0 +1,3 @@
+[32m2023-12-22 09:53:37 +0100[0m - dagster - [34mDEBUG[0m - spendesk - 5c92d164-0d91-4a7d-8319-aac6ea6dbe45 - 104176 - LOGS_CAPTURED - Started capturing logs in process (pid: 104176).
+[32m2023-12-22 09:53:37 +0100[0m - dagster - [34mDEBUG[0m - spendesk - 5c92d164-0d91-4a7d-8319-aac6ea6dbe45 - 104176 - sync_spendesk - STEP_START - Started execution of step "sync_spendesk".
+[32m2023-12-22 09:53:37 +0100[0m - dagster - [34mINFO[0m - spendesk - 5c92d164-0d91-4a7d-8319-aac6ea6dbe45 - sync_spendesk - Job 292 initialized for connection_id=bcb4a837-4784-4647-a213-b161e0c12df5.

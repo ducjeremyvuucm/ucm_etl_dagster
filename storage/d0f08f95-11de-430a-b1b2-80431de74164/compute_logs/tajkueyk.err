@@ -1,0 +1,8 @@
+[32m2023-12-19 23:00:35 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - 468376 - LOGS_CAPTURED - Started capturing logs in process (pid: 468376).
+[32m2023-12-19 23:00:35 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - 468376 - sync_spendesk - STEP_START - Started execution of step "sync_spendesk".
+[32m2023-12-19 23:00:35 +0100[0m - dagster - [34mINFO[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - sync_spendesk - Job 220 initialized for connection_id=bcb4a837-4784-4647-a213-b161e0c12df5.
+[32m2023-12-19 23:02:46 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - 468376 - sync_spendesk - ASSET_MATERIALIZATION - Materialized value airbyte spendesk_payables.
+[32m2023-12-19 23:02:46 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - 468376 - sync_spendesk - STEP_OUTPUT - Yielded output "result" of type "AirbyteOutput". (Type check passed).
+[32m2023-12-19 23:02:46 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - sync_spendesk - Writing file at: /home/djv/dbt/ucm/ucm_dagster/storage/d0f08f95-11de-430a-b1b2-80431de74164/sync_spendesk/result using PickledObjectFilesystemIOManager...
+[32m2023-12-19 23:02:46 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - 468376 - sync_spendesk - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2023-12-19 23:02:46 +0100[0m - dagster - [34mDEBUG[0m - spendesk - d0f08f95-11de-430a-b1b2-80431de74164 - 468376 - sync_spendesk - STEP_SUCCESS - Finished execution of step "sync_spendesk" in 2m10s.
